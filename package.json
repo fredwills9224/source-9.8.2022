@@ -19,6 +19,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-jest": "^26.6.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^26.6.3",
@@ -44,11 +45,15 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
-  ,
+  ],
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
     "transform": {
-      ".*\\.(vue)$": "vue-jest"
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest"
     }
   }
 }
